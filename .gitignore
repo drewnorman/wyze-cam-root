@@ -1,0 +1,7 @@
+.direnv/
+downloads/
+logs/
+backups/
+*.log
+*.img
+*.zip
