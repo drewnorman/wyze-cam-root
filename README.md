@@ -66,3 +66,7 @@ find "$CARD_MOUNT" -maxdepth 3 -type f -iname '*log*' -print
 To save diagnostic output locally without tracking it, use `mkdir -p logs` and redirect command output there; `logs/` is Git-ignored. If the card is absent or unreadable, inspect `journalctl -k -n 80 --no-pager` for reader and filesystem errors. If the camera boots stock and repeatedly says “Ready to connect,” revisit the hardware identification: Thingino notes that v4 hardware can sit on a v3-labeled base.
 
 For initial network checks after camera insertion, look for the camera's provisioning SSID after 3–4 minutes (`nmcli device wifi rescan; nmcli device wifi list`), confirm the client receives an address (`ip address`), then test the web interface with `curl -I http://CAMERA_IP/` once provisioned. Check the router's DHCP leases if the camera is not at the expected address. Avoid assuming an IP before it is provisioned.
+
+## License
+
+The scripts and documentation in this repository are available under the [MIT License](LICENSE). The downloaded Thingino installer remains subject to its upstream license.
